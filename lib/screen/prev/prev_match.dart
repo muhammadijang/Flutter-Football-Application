@@ -13,7 +13,7 @@ class PrevMatch extends StatefulWidget {
 class _PrevMatchState extends State<PrevMatch> {
 
   Future<List<PrevItem>> fetchMatch() async{
-    final request = await http.get('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4328');
+    final request = await http.get('https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4328');
 
     if (request.statusCode == 200) {
       List response = json.decode(request.body)['events'];
